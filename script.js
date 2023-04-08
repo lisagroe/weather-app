@@ -56,6 +56,8 @@ function updateData(response) {
   )} °C`;
   let humidityLevel = document.querySelector("#humidity");
   humidityLevel.innerHTML = `humidity: ${response.data.main.humidity} %`;
+  let city = document.querySelector("#city");
+  city.innerHTML = response.data.name;
 }
 
 function updateCity(response) {
@@ -83,4 +85,4 @@ function getLocation(event) {
 }
 
 let locationButton = document.querySelector("#locateButton");
-locationButton.addEventListener("click", retrievePosition);
+locationButton.addEventListener("click", getLocation);

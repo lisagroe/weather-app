@@ -62,7 +62,7 @@ function updateData(response) {
 
 function updateCity(response) {
   let userCity = document.querySelector("#search-text-input").value;
-  let apiKey = config.api_key;
+  let apiKey = "dac7ababb64b3ca8acde2e00719b2bea";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${userCity}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(updateData);
   console.log(apiUrl);
@@ -72,7 +72,7 @@ searchButton.addEventListener("click", updateCity);
 //
 
 function retrievePosition(position) {
-  let apiKey = config.api_key;
+  let apiKey = "dac7ababb64b3ca8acde2e00719b2bea";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
